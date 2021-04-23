@@ -12,11 +12,13 @@
   },
   "main": "index.js",
   "scripts": {
-    "build": "SKIP_PREFLIGHT_CHECK=true npm run build --workspace=app",
+    "build": "npm run build --workspace=app",
     "start": "npm run start --workspace=api",
+    "lint": "eslint ./api ./app",
     "dev:api": "npm run build && npm run dev --workspace=api"
   },
   "eslintConfig": {
+    "ignorePatterns": "build",
     "extends": "react-app",
     "env": {
       "jest": true,
