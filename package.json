@@ -12,7 +12,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "build": "SKIP_PREFLIGHT_CHECK=true npm run build --workspace=app",
+    "build": "cross-env SKIP_PREFLIGHT_CHECK=true npm run build --workspace=app",
     "lint": "eslint ./api ./app",
     "start": "npm run start --workspace=api",
     "dev:api": "npm run build && npm run dev --workspace=api"
@@ -30,6 +30,9 @@
   },
   "devDependencies": {
     "eslint-plugin-cypress": "2.11.2"
+  },
+  "dependencies": {
+    "cross-env": "7.0.3"
   },
   "keywords": [],
   "author": "",
