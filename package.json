@@ -13,9 +13,9 @@
   "main": "index.js",
   "scripts": {
     "build": "cross-env SKIP_PREFLIGHT_CHECK=true npm run build --workspace=app",
-    "lint": "eslint ./api ./app",
-    "start": "npm run start --workspace=api",
-    "dev:api": "npm run build && npm run dev --workspace=api"
+    "lint": "cross-env eslint ./api ./app",
+    "start": "cross-env npm run start --workspace=api",
+    "dev:api": "cross-env npm run build && npm run dev --workspace=api"
   },
   "eslintConfig": {
     "ignorePatterns": "build",
